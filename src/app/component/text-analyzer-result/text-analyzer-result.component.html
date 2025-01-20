@@ -1,0 +1,27 @@
+<div nxLayout="grid">
+
+  <div nxRow>
+    <div nxCol="12">
+      <div class="scroll-container">
+        <table nxTable class="nx-table--scrollable">
+          <thead>
+          <tr nxTableRow>
+            <th nxHeaderCell>Letter</th>
+            <th nxHeaderCell>Number of Occurrence</th>
+          </tr>
+          </thead>
+          <tbody>
+          @for (item of tableElements; track item.id) {
+            <tr nxTableRow>
+              <td nxTableCell>{{item.letter}}</td>
+              <td nxTableCell>{{item.occurrence}}</td>
+            </tr>
+          }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
