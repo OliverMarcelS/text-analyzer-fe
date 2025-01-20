@@ -2,8 +2,9 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {
   CharacterOccurrence,
-  CharacterOccurrences, TextAnalysisRequest, TextAnalysisResponse,
-  TextAnalysisResult
+  CharacterOccurrences,
+  TextAnalysisRequest,
+  TextAnalysisResponse
 } from '../domain/text-analysis/text-analysis.model';
 import {Observable} from 'rxjs';
 
@@ -30,12 +31,10 @@ export class TextAnalyzerService {
   }
 
   public detectVowelsOnline(sentence: string): Observable<TextAnalysisResponse> {
-    console.info('detectVowelsOnline');
     return this.analyzeOnline(sentence, true);
   }
 
   public detectConsonantsOnline(sentence: string): Observable<TextAnalysisResponse> {
-    console.info('detectConsonantsOnline');
     return this.analyzeOnline(sentence, false);
   }
 
